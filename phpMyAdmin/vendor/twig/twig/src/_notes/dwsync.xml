@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="Compiler.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="Environment.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="ExpressionParser.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="ExtensionSet.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="FileExtensionEscapingStrategy.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="Lexer.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="Markup.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="NodeTraverser.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="Parser.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="Source.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="Template.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="TemplateWrapper.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="Token.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="TokenStream.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="TwigFilter.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="TwigFunction.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="TwigTest.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="Compiler.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548040000000" Dst="2" />
+<file name="Environment.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548040000000" Dst="2" />
+<file name="ExpressionParser.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548040000000" Dst="2" />
+<file name="ExtensionSet.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548040000000" Dst="2" />
+<file name="FileExtensionEscapingStrategy.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548030000000" Dst="2" />
+<file name="Lexer.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548030000000" Dst="2" />
+<file name="Markup.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548030000000" Dst="2" />
+<file name="NodeTraverser.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548030000000" Dst="2" />
+<file name="Parser.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548030000000" Dst="2" />
+<file name="Source.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548020000000" Dst="2" />
+<file name="Template.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548020000000" Dst="2" />
+<file name="TemplateWrapper.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548020000000" Dst="2" />
+<file name="Token.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548020000000" Dst="2" />
+<file name="TokenStream.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548020000000" Dst="2" />
+<file name="TwigFilter.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548010000000" Dst="2" />
+<file name="TwigFunction.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548010000000" Dst="2" />
+<file name="TwigTest.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548010000000" Dst="2" />
+</dwsync>

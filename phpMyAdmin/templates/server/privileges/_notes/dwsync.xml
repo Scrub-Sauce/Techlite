@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="add_user.twig" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229580000000" remote="132890229580000000" Dst="2" />
+<file name="add_user_fieldset.twig" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229580000000" remote="132890229580000000" Dst="2" />
+<file name="change_password.twig" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229580000000" remote="132890229580000000" Dst="2" />
+<file name="choose_user_group.twig" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229580000000" remote="132890229580000000" Dst="2" />
+<file name="edit_routine_privileges.twig" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229580000000" remote="132890229580000000" Dst="2" />
+<file name="initials_row.twig" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229580000000" remote="132890229580000000" Dst="2" />
+<file name="login_information_fields.twig" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229580000000" remote="132890229580000000" Dst="2" />
+<file name="new_user_ajax.twig" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229580000000" remote="132890229580000000" Dst="2" />
+<file name="privileges_summary.twig" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229580000000" remote="132890229580000000" Dst="2" />
+<file name="privileges_table.twig" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229580000000" remote="132890229580000000" Dst="2" />
+<file name="subnav.twig" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229580000000" remote="132890229580000000" Dst="2" />
+<file name="user_overview.twig" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229580000000" remote="132890229580000000" Dst="2" />
+<file name="user_properties.twig" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229580000000" remote="132890229580000000" Dst="2" />
+<file name="users_overview.twig" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229580000000" remote="132890229580000000" Dst="2" />
+<file name="add_user.twig" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229580000000" remote="132943554960000000" Dst="2" />
+<file name="add_user_fieldset.twig" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229580000000" remote="132943554950000000" Dst="2" />
+<file name="change_password.twig" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229580000000" remote="132943554950000000" Dst="2" />
+<file name="choose_user_group.twig" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229580000000" remote="132943554950000000" Dst="2" />
+<file name="edit_routine_privileges.twig" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229580000000" remote="132943554950000000" Dst="2" />
+<file name="initials_row.twig" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229580000000" remote="132943554950000000" Dst="2" />
+<file name="login_information_fields.twig" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229580000000" remote="132943554940000000" Dst="2" />
+<file name="new_user_ajax.twig" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229580000000" remote="132943554940000000" Dst="2" />
+<file name="privileges_summary.twig" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229580000000" remote="132943554940000000" Dst="2" />
+<file name="privileges_table.twig" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229580000000" remote="132943554940000000" Dst="2" />
+<file name="subnav.twig" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229580000000" remote="132943554940000000" Dst="2" />
+<file name="users_overview.twig" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229580000000" remote="132943554930000000" Dst="2" />
+<file name="user_overview.twig" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229580000000" remote="132943554930000000" Dst="2" />
+<file name="user_properties.twig" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229580000000" remote="132943554930000000" Dst="2" />
+</dwsync>

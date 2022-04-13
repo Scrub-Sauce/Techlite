@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="AbstractExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="ArrayExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="ArrowFunctionExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="AssignNameExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="BlockReferenceExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="CallExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="ConditionalExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="ConstantExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="FilterExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="FunctionExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="GetAttrExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="InlinePrint.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="MethodCallExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="NameExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="NullCoalesceExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="ParentExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="TempNameExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="TestExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="VariadicExpression.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="AbstractExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548310000000" Dst="2" />
+<file name="ArrayExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548310000000" Dst="2" />
+<file name="ArrowFunctionExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548300000000" Dst="2" />
+<file name="AssignNameExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548300000000" Dst="2" />
+<file name="BlockReferenceExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548300000000" Dst="2" />
+<file name="CallExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548300000000" Dst="2" />
+<file name="ConditionalExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548290000000" Dst="2" />
+<file name="ConstantExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548290000000" Dst="2" />
+<file name="FilterExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548290000000" Dst="2" />
+<file name="FunctionExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548290000000" Dst="2" />
+<file name="GetAttrExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548290000000" Dst="2" />
+<file name="InlinePrint.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548280000000" Dst="2" />
+<file name="MethodCallExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548280000000" Dst="2" />
+<file name="NameExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548280000000" Dst="2" />
+<file name="NullCoalesceExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548280000000" Dst="2" />
+<file name="ParentExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548280000000" Dst="2" />
+<file name="TempNameExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548270000000" Dst="2" />
+<file name="TestExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548270000000" Dst="2" />
+<file name="VariadicExpression.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943548270000000" Dst="2" />
+</dwsync>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="AbstractController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="CentralColumnsController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="DataDictionaryController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="DesignerController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="EventsController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="ExportController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="ImportController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="MultiTableQueryController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="OperationsController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="PrivilegesController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="QueryByExampleController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="RoutinesController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="SearchController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="SqlAutoCompleteController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="SqlController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="SqlFormatController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="StructureController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="TrackingController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="TriggersController.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="AbstractController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557230000000" Dst="2" />
+<file name="CentralColumnsController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557230000000" Dst="2" />
+<file name="DataDictionaryController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557220000000" Dst="2" />
+<file name="DesignerController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557220000000" Dst="2" />
+<file name="EventsController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557220000000" Dst="2" />
+<file name="ExportController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557220000000" Dst="2" />
+<file name="ImportController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557220000000" Dst="2" />
+<file name="MultiTableQueryController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557210000000" Dst="2" />
+<file name="OperationsController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557210000000" Dst="2" />
+<file name="PrivilegesController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557210000000" Dst="2" />
+<file name="QueryByExampleController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557210000000" Dst="2" />
+<file name="RoutinesController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557210000000" Dst="2" />
+<file name="SearchController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557200000000" Dst="2" />
+<file name="SqlAutoCompleteController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557200000000" Dst="2" />
+<file name="SqlController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557200000000" Dst="2" />
+<file name="SqlFormatController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557200000000" Dst="2" />
+<file name="StructureController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557200000000" Dst="2" />
+<file name="TrackingController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557190000000" Dst="2" />
+<file name="TriggersController.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943557190000000" Dst="2" />
+</dwsync>

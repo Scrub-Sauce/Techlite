@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="AbstractCache.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="ApcuCache.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="ArrayCache.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="ChainCache.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="DoctrineCache.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="FilesystemCache.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="MemcachedCache.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="NullCache.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="PdoCache.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="PhpArrayCache.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="PhpFilesCache.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="Psr6Cache.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="RedisCache.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="TraceableCache.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132890229660000000" remote="132890229660000000" Dst="2" />
+<file name="AbstractCache.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943550130000000" Dst="2" />
+<file name="ApcuCache.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943550120000000" Dst="2" />
+<file name="ArrayCache.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943550120000000" Dst="2" />
+<file name="ChainCache.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943550120000000" Dst="2" />
+<file name="DoctrineCache.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943550120000000" Dst="2" />
+<file name="FilesystemCache.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943550120000000" Dst="2" />
+<file name="MemcachedCache.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943550110000000" Dst="2" />
+<file name="NullCache.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943550110000000" Dst="2" />
+<file name="PdoCache.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943550110000000" Dst="2" />
+<file name="PhpArrayCache.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943550110000000" Dst="2" />
+<file name="PhpFilesCache.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943550110000000" Dst="2" />
+<file name="Psr6Cache.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943550100000000" Dst="2" />
+<file name="RedisCache.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943550100000000" Dst="2" />
+<file name="TraceableCache.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132890229660000000" remote="132943550100000000" Dst="2" />
+</dwsync>
