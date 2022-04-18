@@ -3,6 +3,8 @@
 
 <?php
 include_once "header.php";
+include_once ".env.php";
+
 ?>
 <html>
 	<head>
@@ -12,23 +14,45 @@ include_once "header.php";
 		<div>
 			<form action="insert.php" method="POST">
 				<?php
-				if($_SESSION['firstName'] != NULL ){
-					echo "Default Shipping Address \n";	
-					$firstName = $_SESSION['firstName'];
-					$lastName = $_SESSION['lastName'];
-					$streetAddress = $_SESSION['streetAddress'];
-					$city = $_SESSION['city'];
-					$state = $_SESSION['state'];
-					$zipCode = $_SESSION['zipCode'];
-					$country = $_SESSION['country'];
-					$phoneNumber = $_SESSION['phoneNumber'];
-					echo "$firstName $astName";
-					echo "$streetAddress";
-					echo "$city, $state $zipcode";
-					echo "$country";
-					echo "$phoneNumber";
+				$con = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DATABASE);
+				
+				if (!$con) {
+    				exit("<p class='error'>Connection Error: " . mysqli_connect_error() . "</p>");
+				}
+				session_start();
+				
+				$user = $_SESSION['user'];
+				//$sql = "SELECT * FROM users WHERE user='$user';";
+				$sql = "SELECT * FROM users WHERE user='idiot';";
+				$result = mysqli_query($con, $sql);
+				$row = mysqli_fetch_assoc($result);
+
+				if($row['firstName'] != NULL ){
+				?>
+				<br><h2>Default Shipping Address</h2><br>
+				<?php	
+					$firstName = $row['firstName'];
+					$lastName = $row['lastName'];
+					$streetAddress = $row['streetAddress'];
+					$city = $row['city'];
+					$state = $row['state'];
+					$zipCode = $row['zipCode'];
+					$country = $row['country'];
+					$phoneNumber = $row['phoneNumber'];
+					echo "$firstName $lastName<br>";
+					echo "$streetAddress<br>";
+					echo "$city, $state $zipCode<br>";
+					echo "$country<br>";
+					echo "$phoneNumber <br><br>";
+				
+				?>
+				<input type="checkbox" id="useDefault" name="useDefault" value="useDefault">
+				<label for="useDefault"> <br>Use default shipping address</label><br>
+				<br><input type="submit" value="Submit">
+				<?php
 				}
 				?>
+				
 				<div>
 					<br><h2>Shipping Address</h2><br>
 					<lable for="fname">First Name:</lable><br>

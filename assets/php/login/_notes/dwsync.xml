@@ -5,7 +5,7 @@
 <file name="recover.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132943661795599722" remote="132943661980000000" Dst="2" />
 <file name="register.php" server="ec2-52-53-236-237.us-west-1.compute.amazonaws.com//var/www/html/" local="132943662043083400" remote="132943662230000000" Dst="2" />
 <file name="login.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132943661287736322" remote="132943664470000000" Dst="2" />
-<file name="logout.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132943661561745051" remote="132943664470000000" Dst="2" />
-<file name="recover.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132943661795599722" remote="132943664470000000" Dst="2" />
-<file name="register.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132943662043083400" remote="132943664470000000" Dst="2" />
+<file name="logout.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132947146678256049" remote="132947152180000000" Dst="2" />
+<file name="recover.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132947146678464377" remote="132947152190000000" Dst="2" />
+<file name="register.php" server="ec2-44-202-10-232.compute-1.amazonaws.com//var/www/html/" local="132947146678682619" remote="132947152190000000" Dst="2" />
 </dwsync>
