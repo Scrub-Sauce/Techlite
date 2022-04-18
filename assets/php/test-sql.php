@@ -1,7 +1,7 @@
-<!doctype html>
-<!-- http://ec2-44-202-10-232.compute-1.amazonaws.com/assets/php/test-sql.php -->
-
 <?php
+include '../header.php';
+include_once "../.env.php";
+
 $servername = "localhost";
 $username = "root";
 $password = "X(aC34Xp9v=W]Kt9";

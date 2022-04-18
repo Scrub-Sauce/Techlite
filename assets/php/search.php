@@ -10,5 +10,9 @@ function fetchSearchQuery() {
 ?>
 <div class = "container product">
 </div>
-<script>formatProductData('searchFunc.php');</script>
-<?php include 'footer.php';?>
+<script>
+var url = '/assets/php/searchFunc.php?query=<?php echo $query?>';
+formatProductData(url);</script>
+<?php include 'footer.php';
+echo $query;
+?>

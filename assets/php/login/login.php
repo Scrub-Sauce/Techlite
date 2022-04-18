@@ -9,6 +9,7 @@ include_once "../.env.php";
 
 <html lang="en" dir="ltr">
 	<head>
+		<title>Techlite | Sign In</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
@@ -48,6 +49,7 @@ include_once "../.env.php";
 			} else {
     	?>
 		<div class="container">
+			<h1 class="display-4">Sign in</h1>
 			<div class="form-group">
 				<form class="form" method="POST" name="login">
 					<label for="user">Email Address</label>
@@ -55,8 +57,9 @@ include_once "../.env.php";
 					<small class="form-text text-muted">Example: johndoe@gmail.com</small>
 					<label for="pass">Password</label>
 					<input class="form-control" id="pass" type="password" name="pass" placeholder="Password"/>
-					<button class="form-control btn-primary mt-3" type="submit" value="Login" name="submit">Login</button>
-					<a href="register.php" class="form-control btn btn-outline-primary mt-3" role="button">New Registration</a>
+					<button class="form-control btn-primary mt-3" type="submit" value="Login" name="submit">Sign in</button>
+					<a href="recover.php" class="form-control btn btn-outline-primary mt-1" role="button">Forgot Password?</a>
+					<a href="register.php" class="form-control btn btn-success mt-3" role="button">Create Account</a>
 				</form>
 			</div>
 		</div>

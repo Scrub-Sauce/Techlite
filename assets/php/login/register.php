@@ -7,58 +7,72 @@ include '../header.php';
 include_once "../.env.php";
 ?>
 
-<html style="margin: auto; max-width: 1000px;">
-<link rel="stylesheet" type="text/css" href="main.css">
-<head>
-    <h1 align="center">Register</h1>
-    <hr>
-</head>
-<body>
-<?php
+<html lang="en" dir="ltr">
+	<head>
+		<title>Techlite | Registration</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+	</head>
+	<body>
+		<?php
+			// open the connection
+			$con = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DATABASE);
 
-// open the connection
-$con = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DATABASE);
-
-//verify connection
-if (!$con) {
-    exit("<p class='error'>Connection Error: " . mysqli_connect_error() . "</p>");
-}
-//
-if (isset($_REQUEST['user'])) {
-    $user = $_REQUEST['user'];
-    $user = mysqli_real_escape_string($con, $user);
-    $pass = $_REQUEST['pass'];
-    $pass = mysqli_real_escape_string($con, $pass);
-    $email = $_REQUEST['email'];
-    $email = mysqli_real_escape_string($con, $email);
-    $query= "INSERT INTO users (user, pass, email) VALUES ('$user', '$pass', '$email')";
-    $result   = mysqli_query($con, $query);
-    if ($result) {
-        echo "<div class='form'>
-                  <h3>You have successfully been registered! Welcome!</h3><br/>
-                  <p class='link'>Click <a href='login.php'>here</a> to login</p>
-                  </div>";
-    } else {
-        echo "<div class='form'>
-                  <h3>Please enter information into all of the required fields.</h3><br/>
-                  <p class='link'>Click <a href='register.php'>here</a> to try again.</p>
-                  </div>";
-    }
-} else {
-    ?>
-    <form class="form" action="" method="post">
-        <input type="text" name="user" placeholder="Username" required />
-        <input type="password" name="pass" placeholder="Password" >
-        <input type="text" name="email" placeholder="Email">
-        <input type="submit" name="submit" value="Register">
-        <p class="link"><a href="login.php">Click here to login</a></p>
-        <p class="link"><a href="recover.php">Forgot Password?</a></p> 
-
-
- 
-    </form>
-    <?php include '../footer.php';
-}
-?>
-</body>
+			//verify connection
+			if (!$con) {
+				exit("<p class='error'>Connection Error: " . mysqli_connect_error() . "</p>");
+			}
+			//
+			if (isset($_REQUEST['user'])) {
+				$user = $_REQUEST['user'];
+    			$user = mysqli_real_escape_string($con, $user);
+    			$pass = $_REQUEST['pass'];
+    			$pass = mysqli_real_escape_string($con, $pass);
+    			$email = $_REQUEST['email'];
+    			$email = mysqli_real_escape_string($con, $email);
+				$query= "INSERT INTO users (user, pass, email) VALUES ('$user', '$pass', '$email')";
+				$result   = mysqli_query($con, $query);
+				if ($result) {
+        			echo "<div class='form'>
+       					  <h3>You have successfully been registered! Welcome!</h3><br/>
+                  		  <p class='link'>Click <a href='login.php'>here</a> to login</p>
+                  		  </div>";
+    			} else {
+					echo "<div class='form'>
+                  		  <h3>Please enter information into all of the required fields.</h3><br/>
+                  		  <p class='link'>Click <a href='register.php'>here</a> to try again.</p>
+                  		  </div>";
+    			}
+			} else {
+    	?>
+				<div class="container">
+					<h1 class="display-4">Create Account</h1>
+    				<div class="form-group">
+						<form class="form" action="" method="POST" name="register">
+							<label for="user">Username</label>
+							<input class="form-control" id="user" type="text" name="user" placeholder="Username" required/>
+							<label for="password">Password</label>
+							<input class="form-control" id="pass" type="password" name="pass" placeholder="Password" required/>
+							<label for="email">Email</label>
+							<input class="form-control" id="email" type="text" name="email" placeholder="Email" required/>
+							<button class="form-control btn-primary mt-3" type="submit">Register</button>
+							<a href="login.php" class="form-control btn btn-outline-primary mt-3" role="button">Sign in</a>
+						</form>
+					</div>
+				</div>
+<!--
+				<form class="form" action="" method="post">
+        			<input type="text" name="user" placeholder="Username" required />
+        			<input type="password" name="pass" placeholder="Password" >
+        			<input type="text" name="email" placeholder="Email">
+        			<input type="submit" name="submit" value="Register">
+        			<p class="link"><a href="login.php">Click here to login</a></p>
+    			</form>
+-->
+    			<?php include '../footer.php';
+			}
+				?>
+	</body>
 </html>

@@ -23,7 +23,7 @@
   						<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
 					</form>
 					<ul class="navbar-nav">
-						<li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+						<li class="nav-item"><a class="nav-link" href="/assets/php/contact.php">Contact us</a></li>
 						<li class="nav-item"><a class="nav-link" href="/assets/php/login/login.php">Login</a></li>
 					</ul>
 				</div>
