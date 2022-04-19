@@ -1,5 +1,4 @@
 <!doctype html>
-<!-- http://ec2-44-202-10-232.compute-1.amazonaws.com/index.php -->
 
 <?php include "assets/php/header.php"; ?>
 <html lang="en" dir="ltr">
@@ -44,7 +43,7 @@
 			</div>
 			<div class = "container product">
 			</div>
-			<script>formatProductData('test-sql.php');</script>
+			<script>formatProductData('/assets/php/test-sql.php');</script>
 		</div>
  	</body>
 </html>
