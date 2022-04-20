@@ -3,7 +3,7 @@
 ?>
     <div class = "container product">
         <div class="alert alert-success" role="alert">
-            <?php include 'productAdminFuncs.php'; ?>
+            <?php include 'functions/productAdminFuncs.php'; ?>
         </div>
         <div class="row">
               <div class = "col-2">
@@ -27,7 +27,7 @@
         </div>
     </div>
     <script>
-      var url = '/assets/php/getProducts.php';
+      var url = '/assets/php/functions/getProducts.php';
       productAdminPanel(url);
     </script>
 <?php include 'footer.php' ?>
