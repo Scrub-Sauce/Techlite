@@ -19,6 +19,29 @@ function productAdminPanel(url) {
         var numProducts = 0;
         var items = [];
         var product_row_template = `</div>`;
+        var add_product_template = `<div class="row mb-3">
+        <form onSubmit="if(!confirm('Are you sure you would like to do this?')){return false;}" method = "post" action = "">
+              <div class = "col-2 float-left">
+                    <p>Add New Product:</p>
+              </div>
+              <div class = "col-2 float-left">
+                    <input type = "text" name = "prod_img">
+              </div>
+              <div class = "col-2 float-left">
+                    <input type = "text" name = "prod_name">
+              </div>
+              <div class = "col-2 float-left">
+                  <input type = "text" name = "prod_desc">
+              </div>
+              <div class = "col-2 float-left">
+                  <input type = "text" name = "prod_price">
+              </div>
+              <div class = "col-2 float-left">
+                  <input type="submit" name = "add" value="Add">
+              </div>
+        </form>
+        </div>`
+        items.push(add_product_template);
         $.each(table, function (key, value) {
             console.log(value);
             var product_template = `<div class="row">
@@ -39,7 +62,7 @@ function productAdminPanel(url) {
                       <input type = "text" id = "prod_price${value.id}" name = "prod_price">
                   </div>
                   <div class = "col-1 float-left">
-                      <input type="submit" name = "submit" value="Update">
+                      <input type="submit" name = "update" value="Update">
                   </div>
                   <div class = "col-1 float-left">
                       <input type="submit" name = "delete" value="Delete">
