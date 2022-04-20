@@ -6,10 +6,14 @@ include_once 'phpFunctions.php';
 $con = connectDB(PRODUCT_DB);
 $sql = "SELECT * FROM product_info";
 $query = "";
+$user_id = "";
 
 # If passed a search variable, save it
 if (isset($_GET['query'])) {
     $query = $_GET['query'];
+}
+if (isset($_GET['user_id'])) {
+    $user_id = $_GET['user_id'];
 }
 
 
@@ -24,6 +28,15 @@ if (!empty($query)) {
         $data[] = $row;
     }
     echo json_encode($data);
+} else if (!empty($user_id)) {
+    $sql = "SELECT * FROM product_info.product_info WHERE id IN (SELECT product_id FROM registrar.cart_info WHERE user_id='$user_id');";
+    $results = mysqli_query($con,$sql);
+    $data = array();
+    foreach ($results as $row){
+        $data[] = $row;
+    }
+    echo json_encode($data);
+
 } else {
     $results = mysqli_query($con,$sql);
     $data = array();
