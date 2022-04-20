@@ -13,7 +13,7 @@ if (!$con) {
 }
 session_start();
 
-$action = intval(isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : '');
+$action = $_GET['id'];
 $sql_product = "SELECT * FROM product_info WHERE product_info.id = {$action}";
 $result = mysqli_query($con,$sql_product) or die(mysqli_error($connect));
 $data = array();

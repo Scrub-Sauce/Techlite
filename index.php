@@ -43,7 +43,7 @@
 			</div>
 			<div class = "container product">
 			</div>
-			<script>formatProductData('/assets/php/test-sql.php');</script>
+			<script>formatProductData('/assets/php/getProducts.php');</script>
 		</div>
  	</body>
 </html>

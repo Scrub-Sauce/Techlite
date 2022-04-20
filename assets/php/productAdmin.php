@@ -27,7 +27,7 @@
         </div>
     </div>
     <script>
-      var url = '/assets/php/test-sql.php';
+      var url = '/assets/php/getProducts.php';
       productAdminPanel(url);
     </script>
 <?php include 'footer.php' ?>
