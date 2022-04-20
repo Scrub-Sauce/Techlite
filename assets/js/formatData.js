@@ -109,7 +109,7 @@ function formatProductData(url) {
                                     \t\t\t\t<img style = "height: 40%" class = "img-fluid" id="${key}" src= "${value.product_image}">
                                     \t\t\t\t<p style = "height: 20%" id="${key}" class = "card-title text-truncate">${value.product_name}</p>
                                     \t\t\t\t<p class="card-subtitle mb-2">$${value.product_price}</p>
-                                    \t\t\t\t<a href = "product.php?${value.id}" class="btn btn-primary mt-5 mb-3" role="button" aria-pressed="true">See details</a>
+                                    \t\t\t\t<a href = "/assets/php/product.php?${value.id}" class="btn btn-primary mt-5 mb-3" role="button" aria-pressed="true">See details</a>
                                     \t\t\t</div>
                                     \t\t</div>
                                     \t</div>`
