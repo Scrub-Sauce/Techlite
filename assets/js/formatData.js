@@ -71,10 +71,6 @@ function productAdminPanel(url) {
             </div>`
             items.push(product_template);
             items.push(product_row_template);
-            // document.getElementById(`prod_img${key}`).value = value.product_image;
-            // document.getElementById(`prod_name${key}`).value = value.product_price;
-            // document.getElementById(`prod_price${key}`).value = value.product_name;
-            // document.getElementById(`prod_desc${key}`).value = value.product_desc;
             numProducts++;
         });
         $('<div/>', {

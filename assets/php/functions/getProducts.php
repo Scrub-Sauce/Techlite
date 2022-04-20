@@ -1,14 +1,20 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
 include_once "../.env.php";
 include_once 'phpFunctions.php';
+
+# Connect to DB
 $con = connectDB(PRODUCT_DB);
 $sql = "SELECT * FROM product_info";
 $query = "";
+
+# If passed a search variable, save it
 if (isset($_GET['query'])) {
     $query = $_GET['query'];
 }
+
+
+/* If query found, select product results by it and print JSON,
+otherwise print all products in JSON format */
 if (!empty($query)) {
     $query = htmlspecialchars($query);
     $sql = "SELECT * FROM product_info WHERE product_name LIKE '%".$query."%'";
