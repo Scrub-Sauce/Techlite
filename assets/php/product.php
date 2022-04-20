@@ -4,7 +4,7 @@
 <?php
 include 'header.php';
 include_once '.env.php';
-include_once 'phpFunctions.php';
+include_once 'functions/phpFunctions.php';
 
 $action = $_GET['id'];
 $con = connectDB(PRODUCT_DB);
