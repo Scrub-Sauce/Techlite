@@ -5,21 +5,6 @@
         <div class="alert alert-success" role="alert">
             
         </div>
-        <nav class = "navbar navbar-expand-sm navbar-dark bg-dark mb-3">
-            <div class = "container">
-                <ul class = "navbar-nav">
-                    <li class = "nav-item">
-                        <a class = "nav-link" href="/assets/php/productAdmin.php">Product List</a>
-                    </li>
-                    <li class = "nav-item">
-                        <a class = "nav-link" href="/assets/php/orderList.php">Order List</a>
-                    </li>
-                    <li class = "nav-item">
-                        <a class = "nav-link" href="#">Admin Panel</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
         <div class="row">
             <div class = "col-2">
                 <p>Customer name</p>
