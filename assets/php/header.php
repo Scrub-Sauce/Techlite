@@ -28,6 +28,7 @@
 					</ul>
 				</div>
 			</nav>
+			<?php include 'adminHeader.php' ?>
 		</div>
 	</body>
 </html>
