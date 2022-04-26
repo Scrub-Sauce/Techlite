@@ -7,22 +7,22 @@
         </div>
         <div class="row">
             <div class = "col-2">
-                <p>Customer name</p>
+                <p>Order number</p>
             </div>
             <div class = "col-2">
-                <p>Order Number</p>
+                <p></p>
             </div>
             <div class = "col-2">
-                <p>Order total</p>
+                <p></p>
             </div>
             <div class = "col-2">
-                <p>Total items</p>
+                <p></p>
             </div>
             <div class = "col-2">
-                <p>Order date</p>
+                <p></p>
             </div>
             <div class = "col-2">
-                <p>Submit Changes</p>
+                <p>Details</p>
             </div>
         </div>
         <div class = "orderList">
