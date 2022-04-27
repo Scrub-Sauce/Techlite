@@ -132,3 +132,63 @@ function formatProductData(url) {
     }
 });
 }
+
+function formatCartData(url) {
+    $.ajax({
+        url: url,
+        dataType: "json",
+        data: {},
+        async: false,
+        success: function(table) {
+        var key = -1;
+        var numProducts = 0;
+        var productTotal = 0;
+        var taxRate = 0.0825;
+        var taxTotal = 0;
+        var items = [];
+        var product_row_template = `\t<div class = "row border-bottom">`;
+        $.each(table, function (key, value) {
+            productTotal += parseFloat(value.product_price);
+            taxTotal += (parseFloat(value.product_price) * taxRate);
+            var product_template = `\t<div class="col-lg-3 p-1 my-auto"> \
+                                        <img style = "height: 40%" class = "img-fluid" id="${key}" src= "${value.product_image}">
+                                    </div>
+                                    <div class="col-lg-6 p-1 my-auto text-center">
+                                        <p style = "height: 20%" id="${key}" class = "card-title text-truncate">${value.product_name}</p>
+                                    </div>
+                                    <div class = "col-lg-3 p-1 my-auto text-center">
+                                        <p class="card-subtitle mb-2">$${value.product_price}</p>
+                                    </div>
+                                    </div>`;
+            items.push(product_row_template);
+            items.push(product_template);
+            numProducts++;
+        });
+        productTotal = productTotal.toFixed(2);
+        taxTotal = taxTotal.toFixed(2);
+        var total = parseFloat(productTotal) + parseFloat(taxTotal);
+        var totalRowTemplate = `<div class="col-lg-10 p-1 my-auto"> \
+                                    <h3>Subtotal: </h3>
+                                    <h3>Tax: </h3>
+                                    <h3>Total: </h3>
+                                </div>
+                                <div class = "col-lg-2 p-1 my-auto">
+                                <h3>$${productTotal}</h3>
+                                <h3>$${taxTotal}</h3>
+                                <h3>$${total}</h3>
+                                </div>
+                                </div>`;
+        items.push(product_row_template);
+        items.push(totalRowTemplate);
+        $('<div/>', {
+            "class": "container",
+            html:items.join("")
+        }).appendTo(".product");
+    },
+    error: function(x,y,z) {
+        console.log(x.responseText);
+        console.log(y);
+        console.log(z);
+    }
+});
+}

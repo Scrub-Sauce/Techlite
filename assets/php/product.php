@@ -44,7 +44,7 @@ $product_image3 = $data[0]["product_image3"];
                     </div>
                 </div>
                 <div class = "row mt-3 mx-auto">
-                    <a class="btn btn-primary" href="#">Add to Cart</a>
+                    <a class="btn btn-primary" href="cart.php?prod=<?php echo $action?>">Add to Cart</a>
                 </div>
                 <div class = "row mt-1 mx-auto">
                     <h3>$<?php echo $product_price?></h3>

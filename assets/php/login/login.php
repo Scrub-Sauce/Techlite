@@ -33,15 +33,15 @@ include_once "../.env.php";
     			$pass = $_REQUEST['pass'];
     			$pass = mysqli_real_escape_string($con, $pass);
     			//$password_hash = hash("md5", $_POST['pass']);         //I was gonna protect with hash's but then i got the assignment to work so i dont want to mess with it!
-    			$query= "SELECT * FROM users WHERE user='$user' AND pass='$pass'";                     //if user AND password exist in the users table
-    			$result = mysqli_query($con, $query);                   //store the result of that query in result
+    			$query= "SELECT * FROM user_info WHERE email='$user' AND password='$pass'";                     //if user AND password exist in the users table
+                $result = mysqli_query($con, $query);                   //store the result of that query in result
     			$rows = mysqli_num_rows($result);                       //if there is a match, $rows should contain 1 row
     			if ($rows == 1) {
 					$_SESSION['user'] = $user;                          //attach the session to the current user and log back into index with the user session
 					// Redirect to user dashboard page
-        			header("Location: index.php");
+        			header("Location: /index.php");
 				} else {
-					echo "<div class='form'>                                                          
+					echo "<div class='form'>
                 		<h3>Incorrect Username/password.</h3><br/>
                 		<p class='link'>Click <a href='login.php'>here</a> to try again.</p>
                 		</div>";

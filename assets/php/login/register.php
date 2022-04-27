@@ -25,20 +25,36 @@ include_once "../.env.php";
 				exit("<p class='error'>Connection Error: " . mysqli_connect_error() . "</p>");
 			}
 			//
-			if (isset($_REQUEST['user'])) {
-				$user = $_REQUEST['user'];
-    			$user = mysqli_real_escape_string($con, $user);
+			if (isset($_REQUEST['email'])) {
+				// $user = $_REQUEST['user'];
+    			// $user = mysqli_real_escape_string($con, $user);
     			$pass = $_REQUEST['pass'];
     			$pass = mysqli_real_escape_string($con, $pass);
     			$email = $_REQUEST['email'];
     			$email = mysqli_real_escape_string($con, $email);
-				$query= "INSERT INTO users (user, pass, email) VALUES ('$user', '$pass', '$email')";
+				$query= "INSERT INTO user_info (email, password) VALUES ('$email', '$pass')";
 				$result   = mysqli_query($con, $query);
 				if ($result) {
+					# insert last user_id into contact_info table
+					// $user = "SELECT user_id FROM user_info WHERE email = '$email'";
+					// // echo $user;
+					// $row = mysqli_fetch_assoc($result);
+					
+					// $result = mysqli_query($con, $user);
+					// $query = "INSERT INTO contact_info (user_id) VALUES ($user)";
+					$query = "INSERT INTO contact_info (user_id)
+					SELECT user_id FROM user_info where email = '$email'";
+					$result = mysqli_query($con, $query) or trigger_error("Query Failed! SQL: $search_sql - Error: ".mysqli_error($con), E_USER_ERROR);;
+					$query = "INSERT INTO payment_info (user_id)
+					SELECT user_id FROM user_info where email = '$email'";
+					$result = mysqli_query($con, $query) or trigger_error("Query Failed! SQL: $search_sql - Error: ".mysqli_error($con), E_USER_ERROR);;
+					if ($result) {
         			echo "<div class='form'>
        					  <h3>You have successfully been registered! Welcome!</h3><br/>
                   		  <p class='link'>Click <a href='login.php'>here</a> to login</p>
                   		  </div>";
+					}
+					
     			} else {
 					echo "<div class='form'>
                   		  <h3>Please enter information into all of the required fields.</h3><br/>
@@ -51,13 +67,11 @@ include_once "../.env.php";
 					<h1 class="display-4">Create Account</h1>
     				<div class="form-group">
 						<form class="form" action="" method="POST" name="register">
-							<label for="user">Username</label>
-							<input class="form-control" id="user" type="text" name="user" placeholder="Username" required/>
-							<label for="password">Password</label>
-							<input class="form-control" id="pass" type="password" name="pass" placeholder="Password" required/>
-							<label for="email">Email</label>
-							<input class="form-control" id="email" type="text" name="email" placeholder="Email" required/>
-							<button class="form-control btn-primary mt-3" type="submit">Register</button>
+						<label for="email">Email</label>
+						<input class="form-control" id="email" type="text" name="email" placeholder="Email" required/>
+						<label for="password">Password</label>
+						<input class="form-control" id="pass" type="password" name="pass" placeholder="Password" required/>
+						<button class="form-control btn-primary mt-3" type="submit">Register</button>
 							<a href="login.php" class="form-control btn btn-outline-primary mt-3" role="button">Sign in</a>
 						</form>
 					</div>
