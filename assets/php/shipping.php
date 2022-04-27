@@ -15,7 +15,6 @@ include_once ".env.php";
 	</head>
 	<body>
 		<div class="container">
-			<form action="insert.php" method="POST">
 				<?php
 				$con = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DATABASE);
 				
@@ -26,36 +25,35 @@ include_once ".env.php";
 				
 				$user = $_SESSION['user'];
 				//$sql = "SELECT * FROM users WHERE user='$user';";
-				$sql = "SELECT * FROM users WHERE user='idiot';";
+				$sql = "SELECT * FROM contact_info WHERE user_id='30';";
 				$result = mysqli_query($con, $sql);
 				$row = mysqli_fetch_assoc($result);
 
-				if($row['firstName'] != NULL ){
+				if($row['first_name'] != NULL ){
 				?>
 				<br><h2>Default Shipping Address</h2><br>
 				<?php	
-					$firstName = $row['firstName'];
-					$lastName = $row['lastName'];
-					$streetAddress = $row['streetAddress'];
+					$firstName = $row['first_name'];
+					$lastName = $row['last_name'];
+					$streetAddress = $row['street_address'];
 					$city = $row['city'];
 					$state = $row['state'];
-					$zipCode = $row['zipCode'];
-					$country = $row['country'];
-					$phoneNumber = $row['phoneNumber'];
+					$zipCode = $row['zip'];
+					$phoneNumber = $row['phone_number'];
 					echo "$firstName $lastName<br>";
 					echo "$streetAddress<br>";
 					echo "$city, $state $zipCode<br>";
-					echo "$country<br>";
 					echo "$phoneNumber <br><br>";
 				
 				?>
+			<form action="useDefault.php" method="POST">
 				<div class="form-group float-left">
-					<input class="form-control" type="checkbox" id="useDefault" name="useDefault" value="useDefault">
-					<label for="useDefault"> <br>Use default shipping address</label><br>
-					<button class="form-control btn-success" type="submit">Submit</button>
+					<button class="form-control btn-success" type="submit">Use default shipping address</button>
 				</div>
+			</form>
 				<?php 
 				} ?>
+			<form action="insert.php" method="POST">
 				<div class="clearfix"></div>
 				<div class="form-group float-left">
 					<br><h2 class="display-5">Shipping Address</h2>
@@ -71,10 +69,10 @@ include_once ".env.php";
 					<input class="form-control" type="text" id="state" name="state" required>
 					<lable for="zcode">Zipcode:</lable>
 					<input class="form-control" type="text" id="zcode" name="zcode" required>
-					<lable for="country">Country:</lable>
-					<input class="form-control" type="text" id="country" name="country" required>
 					<lable for="phone">Phone Number:</lable>
-					<input class="form-control" type="text" id="phone" name="phone" required>
+					<input class="form-control" type="text" id="phone" name="phone" required><br>
+					<input type="checkbox" id="useDefaultShipping" name="useDefaultShipping" value="true">
+					<label for="useDefaultShipping"> Set as Default Shipping Address</label><br>
 				</div>
 				<div class="clearfix"></div>
 				<div class="form-group float-left">
@@ -91,10 +89,6 @@ include_once ".env.php";
 					<input class="form-control" type="text" id="cardexp" name="cardexp">
 					<lable for="cardsecurity">Security Code:</lable>
 					<input class="form-control" type="text" id="cardsecurity" name="cardsecurity">
-				</div>
-				<div class="clearfix"></div>
-				<div class="form-group float-left">
-					<br><h2 class="display-5">Billing Address</h2>
 					<lable for="billaddress">Street Address:</lable>
 					<input class="form-control" type="text" id="billaddress" name="billaddress">
 					<lable for="billcity">City:</lable>
@@ -102,7 +96,9 @@ include_once ".env.php";
 					<lable for="billstate">State:</lable>
 					<input class="form-control" type="text" id="billstate" name="billstate">
 					<lable for="billzcode">Zipcode:</lable>	
-					<input class="form-control" type="text" id="billzcode" name="billzcode">
+					<input class="form-control" type="text" id="billzcode" name="billzcode"><br>
+					<input type="checkbox" id="useDefaultBilling" name="useDefaultBilling" value="true">
+					<label for="useDefaultBilling"> Set as Default Payment Method</label><br>
 				</div>
 				<div class="clearfix"></div>
 				<button class="form-control btn-success" type="submit">Submit</button>
