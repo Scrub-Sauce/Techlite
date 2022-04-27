@@ -148,8 +148,8 @@ function formatCartData(url) {
         var items = [];
         var product_row_template = `\t<div class = "row border-bottom">`;
         $.each(table, function (key, value) {
-            productTotal += parseFloat(value.product_price);
-            taxTotal += (parseFloat(value.product_price) * taxRate);
+            productTotal += parseFloat(value.product_price.replace(/,/, ''));
+            taxTotal += (parseFloat(value.product_price.replace(/,/, '')) * taxRate);
             var product_template = `\t<div class="col-lg-3 p-1 my-auto"> \
                                         <img style = "height: 40%" class = "img-fluid" id="${key}" src= "${value.product_image}">
                                     </div>
@@ -167,15 +167,16 @@ function formatCartData(url) {
         productTotal = productTotal.toFixed(2);
         taxTotal = taxTotal.toFixed(2);
         var total = parseFloat(productTotal) + parseFloat(taxTotal);
+        total = total.toFixed(2);
         var totalRowTemplate = `<div class="col-lg-10 p-1 my-auto"> \
                                     <h3>Subtotal: </h3>
                                     <h3>Tax: </h3>
-                                    <h3>Total: </h3>
+                                    <h3 class = "mt-4">Total: </h3>
                                 </div>
-                                <div class = "col-lg-2 p-1 my-auto">
+                                <div class = "col-lg-2 p-1 my-auto text-right">
                                 <h3>$${productTotal}</h3>
                                 <h3>$${taxTotal}</h3>
-                                <h3>$${total}</h3>
+                                <h3 class = "mt-4">$${total}</h3>
                                 </div>
                                 </div>`;
         items.push(product_row_template);

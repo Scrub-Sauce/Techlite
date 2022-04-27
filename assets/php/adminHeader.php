@@ -2,8 +2,7 @@
 include_once 'functions/phpFunctions.php';
 include_once '.env.php';
 $con = connectDB(DATABASE);
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+
 $user = $_SESSION['user'];
 $user_id = -1;
 if(isset($user)) {

@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- http://ec2-44-202-10-232.compute-1.amazonaws.com/assets/php/header.php -->
-
+<?php session_start(); ?>
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
@@ -24,12 +24,26 @@
 					</form>
 					<ul class="navbar-nav">
 						<li class="nav-item"><a class="nav-link" href="/assets/php/contact.php">Contact us</a></li>
-						<li class="nav-item"><a class="nav-link" href="/assets/php/login/login.php">Login</a></li>
+                        <?php
+                        if(!isset($_SESSION["user"])){ ?>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/assets/php/login/login.php">Login</a><br>
+                          </li>;
+                        <?php } else{ ?>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">User Info</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="/assets/php/cart.php">My Cart</a>
+                                        <a class="dropdown-item" href="#">Account Info</a>
+                                        <a class="dropdown-item" href="/assets/php/login/logout.php">Logout</a>
+                                    </div>
+                                      </li>;
+                            <?php } ?>
 					</ul>
 				</div>
 			</nav>
-			<?php include 'adminHeader.php' ?>
 		</div>
 	</body>
-</html>
 
+</html>

@@ -12,9 +12,11 @@ $user = $_SESSION['user'];
 $user_id = -1;
 $prod = $_GET["prod"];
 
-if(isset($user) && isset($prod)) {
+if(isset($user)) {
   $user_id = fetchUserID($user, $con);
-  pushUserCartData($prod, $user_id, $con);
+  if (isset($prod)) {
+      pushUserCartData($prod, $user_id, $con);
+  }
 } else {
   header("Location: login/login.php");
   exit();
