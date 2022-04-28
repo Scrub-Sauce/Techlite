@@ -2,37 +2,38 @@
 <!-- http://ec2-44-202-10-232.compute-1.amazonaws.com/assets/php/shipping.php -->
 
 <?php
-include_once "header.php";
-include_once ".env.php";
+include 'header.php';
+include_once 'functions/phpFunctions.php';
+include_once '.env.php';
+include_once 'authentication.php';
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 ?>
-<html lang="en" dir="ltr">
-	<head>
-		<title>Techlite | Shipping</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
-	</head>
-	<body>
 		<div class="container">
 				<?php
 				$con = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DATABASE);
-				
+
 				if (!$con) {
     				exit("<p class='error'>Connection Error: " . mysqli_connect_error() . "</p>");
 				}
-				session_start();
-				
+
 				$user = $_SESSION['user'];
-				//$sql = "SELECT * FROM users WHERE user='$user';";
-				$sql = "SELECT * FROM contact_info WHERE user_id='30';";
-				$result = mysqli_query($con, $sql);
+                $user_id = fetchUserID($user, $con);
+				// $user = 32;
+				// $_SESSION['user'] = $user;
+				//$sql = "SELECT * FROM contact_info WHERE user_id='$user';";
+				$sql = "SELECT * FROM contact_info WHERE user_id=$user_id";
+				$result = mysqli_query($con, $sql) or trigger_error("Query Failed! SQL: $sql - Error: ".mysqli_error($con), E_USER_ERROR);
 				$row = mysqli_fetch_assoc($result);
+
+				$sql = "SELECT * FROM payment_info WHERE user_id=$user_id";
+				$result = mysqli_query($con, $sql)  or trigger_error("Query Failed! SQL: $sql - Error: ".mysqli_error($con), E_USER_ERROR);
+				$row2 = mysqli_fetch_assoc($result);
 
 				if($row['first_name'] != NULL ){
 				?>
 				<br><h2>Default Shipping Address</h2><br>
-				<?php	
+				<?php
 					$firstName = $row['first_name'];
 					$lastName = $row['last_name'];
 					$streetAddress = $row['street_address'];
@@ -44,14 +45,33 @@ include_once ".env.php";
 					echo "$streetAddress<br>";
 					echo "$city, $state $zipCode<br>";
 					echo "$phoneNumber <br><br>";
-				
+				if($row2['name_on_card']!= NULL){
+
+				?>
+				<br><h2>Default Payment Method</h2><br>
+				<?php
+					$cardName = $row2['name_on_card'];
+					$cardNum = $row2['card_number'];
+					$cardExp = $row2['expiration'];
+					$cardSecurity = $row2['security_code'];
+					$billAddress = $row2['billing_address'];
+					$billState = $row2['billing_state'];
+					$billCity = $row2['billing_city'];
+					$billZip = $row2['billing_zip'];
+					echo "$cardName<br>";
+					echo "$cardNum<br>";
+					echo "$cardExp    $cardSecurity<br>";
+					echo "$billAddress<br>";
+					echo "$billCity, $billState $billZip<br><br>";
+				}
+
 				?>
 			<form action="useDefault.php" method="POST">
 				<div class="form-group float-left">
-					<button class="form-control btn-success" type="submit">Use default shipping address</button>
+					<button class="form-control btn-success" type="submit">Use Default Address and Payment</button>
 				</div>
 			</form>
-				<?php 
+				<?php
 				} ?>
 			<form action="insert.php" method="POST">
 				<div class="clearfix"></div>
@@ -77,12 +97,8 @@ include_once ".env.php";
 				<div class="clearfix"></div>
 				<div class="form-group float-left">
 					<br><h2 class="display-5">Payment Information</h2>
-					<lable for="paymentfname">First Name:</lable>
-					<input class="form-control" type="text" id="paymentfname" name="paymentfname">
-					<lable for="paymentmname">Middle Name:</lable>
-					<input class="form-control" type="text" id="paymentmname" name="paymentmname">
-					<lable for="paymentlname">Last Name:</lable>
-					<input class="form-control" type="text" id="paymentlname" name="paymentlname">
+					<lable for="paymentname">Name on Card:</lable>
+					<input class="form-control" type="text" id="paymentname" name="paymentname">
 					<lable for="cardnumber">Card Number:</lable>
 					<input class="form-control" type="text" id="cardnumber" name="cardnumber">
 					<lable for="cardexp">Expiration Date:</lable>
@@ -95,7 +111,7 @@ include_once ".env.php";
 					<input class="form-control" type="text" id="billcity" name="billcity">
 					<lable for="billstate">State:</lable>
 					<input class="form-control" type="text" id="billstate" name="billstate">
-					<lable for="billzcode">Zipcode:</lable>	
+					<lable for="billzcode">Zipcode:</lable>
 					<input class="form-control" type="text" id="billzcode" name="billzcode"><br>
 					<input type="checkbox" id="useDefaultBilling" name="useDefaultBilling" value="true">
 					<label for="useDefaultBilling"> Set as Default Payment Method</label><br>
@@ -104,6 +120,5 @@ include_once ".env.php";
 				<button class="form-control btn-success" type="submit">Submit</button>
 			</form>
 		</div>
-	</body>
-</html>
-<?php include_once "footer.php";?>
+
+<?php include_once 'footer.php';?>

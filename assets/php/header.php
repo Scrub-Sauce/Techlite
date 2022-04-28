@@ -27,7 +27,7 @@
                         <?php
                         if(!isset($_SESSION["user"])){ ?>
                         <li class="nav-item">
-                          <a class="nav-link" href="/assets/php/login/login.php">Login</a><br>
+                          <a class="nav-link" href="/assets/php/login/login.php">Login</a>
                           </li>;
                         <?php } else{ ?>
                                 <li class="nav-item dropdown">
@@ -35,7 +35,7 @@
                                     aria-haspopup="true" aria-expanded="false">User Info</a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                         <a class="dropdown-item" href="/assets/php/cart.php">My Cart</a>
-                                        <a class="dropdown-item" href="#">Account Info</a>
+                                        <a class="dropdown-item" href="/assets/php/shipping.php">Account Info</a>
                                         <a class="dropdown-item" href="/assets/php/login/logout.php">Logout</a>
                                     </div>
                                       </li>;
@@ -44,6 +44,7 @@
 				</div>
 			</nav>
 		</div>
+        <?php include 'adminHeader.php'; ?>
 	</body>
 
 </html>

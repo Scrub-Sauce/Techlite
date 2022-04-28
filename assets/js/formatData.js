@@ -86,6 +86,90 @@ function productAdminPanel(url) {
     }
 });
 }
+function formatUserData(url) {
+    $.ajax({
+        url: url,
+        dataType: "json",
+        data: {},
+        async: false,
+        success: function(table) {
+        var key = -1;
+        var items = [];
+        var row_template = `\t<div id = "accordion">`;
+        items.push(row_template);
+        $.each(table, function (key, value) {
+            var user_template = `<div class="card">
+                <div class="card-header" id="heading${value.user_id}">
+                <div class = "row">
+                <div class = "col-3">
+                    <h5>${value.user_id}</h5>
+                </div>
+                <div class = "col-6">
+                    <h5>${value.email}</h5>
+                </div>
+                <div class = "col-3">
+                <h5 class="mb-0">
+                    <button class="btn btn-primary my-2 my-sm-0 collapsed" data-toggle="collapse" data-target="#collapse${value.user_id}" aria-expanded="true" aria-controls="collapseOne">
+                    See Details
+                    </button>
+                </h5>
+                </div>
+                </div>
+                </div>
+
+                <div id="collapse${value.user_id}" class="collapse" aria-labelledby="heading${value.user_id}" data-parent="#accordion">
+                <div class="card-body">
+                <div class = "row">
+                    <div class = "col-4">
+                        <p>${value.first_name} ${value.last_name}</p>
+                    </div>
+                    <div class = "col-4">
+                        <p>${value.user_id}</p>
+                    </div>
+                    <div class = "col-4">
+                        <p><a href = "">Contact</a></p>
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-4">
+                        <p>Email: </p>
+                    </div>
+                    <div class = "col-8">
+                        <p>${value.email}</p>
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-4">
+                        <p>Address: </p>
+                    </div>
+                    <div class = "col-8">
+                        <p>${value.street_address}, ${value.city} ${value.state}</p>
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-4">
+                        <p>Billing: </p>
+                    </div>
+                    <div class = "col-8">
+                        <p>${value.street_address}, ${value.city} ${value.state}</p>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>`;
+            items.push(user_template);
+        });
+        $('<div/>', {
+            html:items.join("")
+        }).appendTo(".users");
+    },
+    error: function(x,y,z) {
+        console.log(x.responseText);
+        console.log(y);
+        console.log(z);
+    }
+});
+}
 function formatProductData(url) {
     $.ajax({
         url: url,
