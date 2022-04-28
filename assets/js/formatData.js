@@ -7,7 +7,7 @@ function setProductAdminData(table) {
         document.getElementById(`prod_price${value.id}`).value = value.product_price;
         document.getElementById(`prod_desc${value.id}`).value = value.product_desc;
     });
-}
+}/*
 function productAdminPanel(url) {
     $.ajax({
         url: url,
@@ -85,7 +85,115 @@ function productAdminPanel(url) {
         console.log(z);
     }
 });
+}*/
+
+function productAdminPanel(url) {
+    $.ajax({
+        url: url,
+        dataType: "json",
+        data: {},
+        async: false,
+        success: function(table) {
+        var key = -1;
+        var items = [];
+        var row_template = `\t<div id = "accordion">`;
+        items.push(row_template);
+        $.each(table, function (key, value) {
+            var product_template = `<div class="card">
+                <div class="card-header" id="heading${value.id}">
+                <div class = "row">
+                <div class = "col-3">
+                    <h5>${value.id}</h5>
+                </div>
+                <div class = "col-6">
+                    <h5>${value.product_name}</h5>
+                </div>
+                <div class = "col-3">
+                <h5 class="mb-0">
+                    <button class="btn btn-primary my-2 my-sm-0 collapsed" data-toggle="collapse" data-target="#collapse${value.id}" aria-expanded="true" aria-controls="collapseOne">
+                    See Details
+                    </button>
+                </h5>
+                </div>
+                </div>
+                </div>
+
+                <div id="collapse${value.id}" class="collapse" aria-labelledby="heading${value.id}" data-parent="#accordion">
+                <div class="card-body">
+                <form onSubmit="if(!confirm('Are you sure you would like to do this?')){return false;}" method = "post" action = "">
+                    <div class = "row">
+                        <div class = "col-4">
+                            <input type = "text" id = "prod_img${value.id}" name = "prod_img">
+                        </div>
+                        <div class = "col-4">
+                            <input type = "text" id = "prod_img${value.id}" name = "prod_img2">
+                        </div>
+                        <div class = "col-4">
+                            <input type = "text" id = "prod_img${value.id}" name = "prod_img3">
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col-4">
+                            <p>Product Name: </p>
+                        </div>
+                        <div class = "col-4">
+                            <input type = "text" id = "prod_name${value.id}" name = "prod_name">
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col-4">
+                            <p>Product ID: </p>
+                        </div>
+                        <div class = "col-4">
+                            <input type = "text" id = "${value.id}" name = "prod_id" value = "${value.id}" readonly>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col-4">
+                            <p>Product Price: </p>
+                        </div>
+                        <div class = "col-4">
+                            <input type = "text" id = "prod_price${value.id}" name = "prod_price">
+                        </div>
+                        <div class = "col-4">
+                            <button class="btn btn-primary my-2 my-sm-0 collapsed" data-toggle="collapse" data-target="#collapse${value.id}" aria-expanded="true" aria-controls="collapseOne">
+                            Delete Product
+                            </button>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col-4">
+                            <p>Product Description: </p>
+                        </div>
+                        <div class = "col-4">
+                            <input type = "text" id = "prod_desc${value.id}" name = "prod_desc">
+                        </div>
+                        <div class = "col-4">
+                            <button class="btn btn-primary my-2 my-sm-0 collapsed" data-toggle="collapse" data-target="#collapse${value.id}" aria-expanded="true" aria-controls="collapseOne">
+                            Submit Changes
+                            </button>
+                        </div>
+                    </div>
+                    </div>
+                </form>
+
+                </div>
+            </div>`;
+            items.push(product_template);
+        });
+        $('<div/>', {
+            html:items.join("")
+        }).appendTo(".product");
+        setProductAdminData(table);
+    },
+    error: function(x,y,z) {
+        console.log(x.responseText);
+        console.log(y);
+        console.log(z);
+    }
+});
 }
+
 function formatUserData(url) {
     $.ajax({
         url: url,
