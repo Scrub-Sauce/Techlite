@@ -156,7 +156,7 @@ function productAdminPanel(url) {
                             <input type = "text" id = "prod_price${value.id}" name = "prod_price">
                         </div>
                         <div class = "col-4">
-                            <button class="btn btn-primary my-2 my-sm-0 collapsed" data-toggle="collapse" data-target="#collapse${value.id}" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="btn btn-danger my-2 my-sm-0 collapsed" data-toggle="collapse" data-target="#collapse${value.id}" aria-expanded="true" aria-controls="collapseOne">
                             Delete Product
                             </button>
                         </div>
@@ -169,7 +169,7 @@ function productAdminPanel(url) {
                             <input type = "text" id = "prod_desc${value.id}" name = "prod_desc">
                         </div>
                         <div class = "col-4">
-                            <button class="btn btn-primary my-2 my-sm-0 collapsed" data-toggle="collapse" data-target="#collapse${value.id}" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="btn btn-success my-2 my-sm-0 collapsed" data-toggle="collapse" data-target="#collapse${value.id}" aria-expanded="true" aria-controls="collapseOne">
                             Submit Changes
                             </button>
                         </div>
