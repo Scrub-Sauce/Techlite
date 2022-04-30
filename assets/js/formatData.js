@@ -110,7 +110,7 @@ function productAdminPanel(url) {
                 </div>
                 <div class = "col-3">
                 <h5 class="mb-0">
-                    <button class="btn btn-primary my-2 my-sm-0 collapsed" data-toggle="collapse" data-target="#collapse${value.id}" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="btn btn-info my-2 my-sm-0 collapsed" data-toggle="collapse" data-target="#collapse${value.id}" aria-expanded="true" aria-controls="collapseOne">
                     See Details
                     </button>
                 </h5>
@@ -217,7 +217,7 @@ function formatUserData(url) {
                 </div>
                 <div class = "col-3">
                 <h5 class="mb-0">
-                    <button class="btn btn-primary my-2 my-sm-0 collapsed" data-toggle="collapse" data-target="#collapse${value.user_id}" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="btn btn-info my-2 my-sm-0 collapsed" data-toggle="collapse" data-target="#collapse${value.user_id}" aria-expanded="true" aria-controls="collapseOne">
                     See Details
                     </button>
                 </h5>
