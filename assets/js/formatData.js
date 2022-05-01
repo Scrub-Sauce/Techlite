@@ -232,7 +232,7 @@ function orderAdminPanel(url) {
                 <div class="card-header" id="heading${value.user_id}">
                 <div class = "row">
                 <div class = "col-3">
-                    <h5>${value.user_id}</h5>
+                    <h5>${value.order_id}</h5>
                 </div>
                 <div class = "col-6">
                     <h5>${value.email}</h5>
