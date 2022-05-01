@@ -19,6 +19,11 @@ if (!$con) {
 $user = $_SESSION['user'];
 $user_id = fetchUserID($user, $con);
 
+if (!isset($_POST['useDefaultShipping']) || !isset($_POST['useDefaultBilling'])) {
+    header("Location: placeOrder.php?order_confirmation=Success");
+    exit();
+}
+
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $address = $_POST['address'];
@@ -38,8 +43,10 @@ $billState = $_POST['billstate'];
 $billZip = $_POST['billzcode'];
 $defaultBilling = $_POST['useDefaultBilling'];
 
-echo $defaultBilling;
-if (!empty($fname) && !empty($cardName)) {
+$contact_check = !empty($fname) && !empty($lname) && !empty($city) && !empty($state) && !empty($zcode) && !empty($phone)  && !empty($defaultShipping);
+$payment_check = !empty($cardName) && !empty($cardNum) && !empty($cardExp) && !empty($cardSecurity) && !empty($billAddress) && !empty($billCity) && !empty($billState) && !empty($billZip) && !empty($defaultBilling);
+
+if ($contact_check && $payment_check) {
 	if ($defaultShipping == TRUE){
 		$sql = "UPDATE contact_info
 				SET first_name = '$fname', last_name = '$lname', phone_number = '$phone', street_address = '$address', city = '$city', state = '$state', zip = '$zcode'
@@ -52,9 +59,13 @@ if (!empty($fname) && !empty($cardName)) {
 				WHERE user_id = '$user_id'";
 		mysqli_query($con, $sql) or trigger_error("Query Failed! SQL: $sql - Error: ".mysqli_error($con), E_USER_ERROR);
 	}
-
-header("Location: http://ec2-44-202-10-232.compute-1.amazonaws.com/assets/php/placeOrder.php");
-exit();
+if (isset($_GET['order_confirmation'])) {
+    header("Location: placeOrder.php?order_confirmation=Success");
+    exit();
+} else {
+    header("Location: shipping.php");
+    exit();
+}
 
 }else {
 	echo "All Fields Are Required";

@@ -2,6 +2,8 @@
 <!-- http://ec2-44-202-10-232.compute-1.amazonaws.com/assets/php/search.php -->
 
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 include 'header.php';
 include_once 'functions/phpFunctions.php';
 include_once '.env.php';
@@ -10,14 +12,12 @@ include_once 'authentication.php';
 $con = connectDB(PRODUCT_DB);
 $user = $_SESSION['user'];
 $user_id = -1;
-$prod = '';
-if (isset($_GET["prod"])) {
-    $prod = $_GET["prod"];
-}
+$ord = $_GET["order_confirmation"];
+
 if(isset($user)) {
   $user_id = fetchUserID($user, $con);
-  if (isset($_GET["prod"])) {
-      pushUserCartData($prod, $user_id, $con);
+  if ($ord) { // Check for cart data here
+      $order_id = pushUserOrderData($con, $user_id);
   }
 } else {
   header("Location: login/login.php");
@@ -27,7 +27,7 @@ if(isset($user)) {
 
 <div class = "container product">
     <div class = "row justify-content-center">
-            <h3>User Cart</h>
+            <h3>Order Page</h>
       </div>
       <div class = "row">
       <div class="col-lg-3 p-1 my-auto text-center">
@@ -43,11 +43,8 @@ if(isset($user)) {
     </div>
 </div>
 <script>
-    var url = '/assets/php/functions/getProducts.php?user_id=<?php echo $user_id;?>';
+    var url = '/assets/php/functions/getProducts.php?order_id=<?php echo $order_id?>';
     formatCartData(url);
 </script>
-<div class = "row justify-content-center">
-      <a href = "shipping.php?order_confirmation=True" class="btn btn-lg btn-primary mt-5 mb-3" role="button" aria-pressed="true">Checkout</a>
-</div>
 
 <?php include 'footer.php';?>

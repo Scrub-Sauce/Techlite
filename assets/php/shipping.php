@@ -8,6 +8,10 @@ include_once '.env.php';
 include_once 'authentication.php';
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+$order_confirmation = False;
+if (isset($_GET["order_confirmation"])) {
+    $order_confirmation = True;
+}
 ?>
 		<div class="container">
 				<?php
@@ -64,16 +68,17 @@ ini_set('display_errors', 1);
 					echo "$billAddress<br>";
 					echo "$billCity, $billState $billZip<br><br>";
 				}
-
+                if($order_confirmation != False) {
 				?>
-			<form action="useDefault.php" method="POST">
+
+			<form action="insert.php?order_confirmation=<?php echo $order_confirmation ?>" method="POST">
 				<div class="form-group float-left">
 					<button class="form-control btn-success" type="submit">Use Default Address and Payment</button>
 				</div>
 			</form>
 				<?php
-				} ?>
-			<form action="insert.php" method="POST">
+				}} ?>
+			<form action="insert.php?order_confirmation=<?php echo $order_confirmation ?>" method="POST">
 				<div class="clearfix"></div>
 				<div class="form-group float-left">
 					<br><h2 class="display-5">Shipping Address</h2>

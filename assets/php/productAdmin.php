@@ -6,23 +6,14 @@
             <?php include 'functions/productAdminFuncs.php'; ?>
         </div>
         <div class="row">
-              <div class = "col-2">
+              <div class = "col-lg-2">
                   <p>Product ID</p>
               </div>
-              <div class = "col-2">
-                    <p>Product Image</p>
-              </div>
-              <div class = "col-2">
+              <div class = "col-lg-8">
                     <p>Product Name</p>
               </div>
-              <div class = "col-2">
-                  <p>Product Description</p>
-              </div>
-              <div class = "col-2">
-                  <p>Product Price</p>
-              </div>
-              <div class = "col-2">
-                  <p>Submit Changes</p>
+              <div class = "col-lg-2">
+                  <p>Details</p>
               </div>
         </div>
     </div>

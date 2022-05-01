@@ -1,5 +1,4 @@
 <?php
-
 # Connects to SQL database and begins a session
 function connectDB($db) {
     $con = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, $db);
@@ -8,8 +7,6 @@ function connectDB($db) {
     if (!$con) {
         exit("<p class='error'>Connection Error: " . mysqli_connect_error() . "</p>");
     }
-
-    session_start();
     return $con;
 }
 
@@ -48,5 +45,25 @@ function pushUserCartData($prod, $user, $con) {
     $sql_cart = "INSERT INTO registrar.cart_info (user_id, product_id, product_qty) VALUES ('$user', '$prod', 1)";
     $result = mysqli_query($con,$sql_cart) or trigger_error("Query Failed! SQL: $search_sql - Error: ".mysqli_error($con), E_USER_ERROR);
     return;
+}
+
+
+
+function pushUserOrderData($con, $user) {
+    $date = date('Y-m-d H:i:s');
+    $status = "Pending";
+    $sql_order = "INSERT INTO orders.order_info (user_id, order_date, order_status) VALUES ('$user', '$date', '$status')";
+    $result1 = mysqli_query($con,$sql_order) or die(mysqli_error($con));
+    $sql_id = "SELECT * FROM orders.order_info WHERE order_id = LAST_INSERT_ID()";
+    $result2 = mysqli_query($con,$sql_id) or die(mysqli_error($con));
+    $row = mysqli_fetch_row($result2);
+    $order_id = $row[0];
+    $sql_order_products = "INSERT INTO orders.order_products (order_id, product_id, quantity, price, discount)
+                            SELECT $order_id, product_id, product_qty, '10', '10'
+                            FROM registrar.cart_info WHERE registrar.cart_info.user_id = $user";
+    $result3 = mysqli_query($con,$sql_order_products) or trigger_error("Query Failed! SQL: $search_sql - Error: ".mysqli_error($con), E_USER_ERROR);
+    $sql_delete_cart = "DELETE FROM registrar.cart_info WHERE user_id = '$user'";
+    $result4 = mysqli_query($con,$sql_delete_cart) or die(mysqli_error($con));
+    return $order_id;
 }
 ?>
