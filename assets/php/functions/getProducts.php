@@ -8,6 +8,7 @@ $sql = "SELECT * FROM product_info";
 $query = "";
 $user_id = "";
 $order_id = "";
+
 # If passed a search variable, save it
 if (isset($_GET['query'])) {
     $query = $_GET['query'];
@@ -16,7 +17,7 @@ if (isset($_GET['user_id'])) {
     $user_id = $_GET['user_id'];
 }
 if (isset($_GET['order_id'])) {
-    $user_id = $_GET['order_id'];
+    $order_id = $_GET['order_id'];
 }
 
 

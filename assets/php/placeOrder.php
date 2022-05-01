@@ -23,6 +23,7 @@ if(isset($user)) {
   header("Location: login/login.php");
   exit();
 }
+$sql_order = "SELECT * FROM orders.order_info WHERE order_id = '$order_id'";
       ?>
 
 <div class = "container product">
@@ -44,7 +45,7 @@ if(isset($user)) {
 </div>
 <script>
     var url = '/assets/php/functions/getProducts.php?order_id=<?php echo $order_id?>';
-    formatCartData(url);
+    formatOrderData(url);
 </script>
 
 <?php include 'footer.php';?>
