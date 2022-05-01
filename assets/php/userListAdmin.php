@@ -3,7 +3,7 @@
 ?>
     <div class = "container users">
         <div class="alert alert-success" role="alert">
-
+            <?php include 'functions/userAdminFuncs.php'; ?>
         </div>
         <div class="card">
         <div class="card-header">

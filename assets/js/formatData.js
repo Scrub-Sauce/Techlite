@@ -124,7 +124,6 @@ function productAdminPanel(url) {
                 <div class="card-body">
                 <form onSubmit="if(!confirm('Are you sure you would like to do this?')){return false;}" method = "post" action = "">
                     <div class = "row mb-1">
-                    <div class="input-group input-group-lg">
                         <div class = "col-lg-4">
                             <h5>Image 1</h5>
                             <input class = "w-100" type = "text" id = "prod_img${value.id}" name = "prod_img">
@@ -137,7 +136,6 @@ function productAdminPanel(url) {
                             <h5>Image 3</h5>
                             <input class = "w-100" type = "text" id = "prod_img3${value.id}" name = "prod_img3">
                         </div>
-                    </div>
                     </div>
                     <div class = "row">
                         <div class = "col-lg-4">
@@ -152,7 +150,7 @@ function productAdminPanel(url) {
                                     <p>Product Qty:</p>
                                 </div>
                                 <div class = "col-lg-8">
-                                    <input class = "w-100" type = "text" id = "${value.id}" name = "prod_id" value = "${value.id}" readonly>
+                                    <input class = "w-100" type = "text" id = "${value.id}" name = "prod_qty" value = "${value.product_qty}">
                                 </div>
                             </div>
                         </div>
@@ -251,40 +249,77 @@ function formatUserData(url) {
 
                 <div id="collapse${value.user_id}" class="collapse" aria-labelledby="heading${value.user_id}" data-parent="#accordion">
                 <div class="card-body">
+                <form onSubmit="if(!confirm('Are you sure you would like to do this?')){return false;}" method = "post" action = "">
                 <div class = "row">
-                    <div class = "col-4">
-                        <p>${value.first_name} ${value.last_name}</p>
+                    <div class = "col-lg-2">
+                        <h5>User ID</h5>
+                        <input class = "w-100" type = "text" id = "id{value.user_id}" name = "user_id" value = "${value.user_id}" readonly>
                     </div>
-                    <div class = "col-4">
-                        <p>${value.user_id}</p>
+                    <div class = "col-lg-6">
+                        <h5>Full Name</h5>
+                        <input class = "w-100" type = "text" id = "name{value.user_id}" name = "name" value = "${value.first_name} ${value.last_name}">
                     </div>
-                    <div class = "col-4">
-                        <p><a href = "">Contact</a></p>
+                    <div class = "col-lg-4">
+                        <h5>Contact</h5>
+                        <p><a class = "btn btn-success w-100" href = "mailto:${value.email}">Send email</a></p>
                     </div>
                 </div>
                 <div class = "row">
-                    <div class = "col-4">
+                    <div class = "col-lg-2">
                         <p>Email: </p>
                     </div>
-                    <div class = "col-8">
-                        <p>${value.email}</p>
+                    <div class = "col-lg-6">
+                        <input class = "w-100" type = "text" id = "mail{value.email}" name = "email" value = "${value.email}">
+                    </div>
+                    <div class = "col-lg-4">
+                        <input class = "btn btn-danger w-100" type = "submit" name = "admin" value = "Make Admin">
                     </div>
                 </div>
+                <div class = "row mt-1">
+                <div class = "col-lg-12 text-center">
+                    <h5>Shipping Info</h5>
+                    </div>
+                    </div>
                 <div class = "row">
-                    <div class = "col-4">
-                        <p>Address: </p>
-                    </div>
-                    <div class = "col-8">
-                        <p>${value.street_address}, ${value.city} ${value.state}</p>
-                    </div>
+                        <div class = "col-lg-3">
+                             <p>Address</p>
+                             <input class = "w-100" type = "text" id = "add{value.user_id}" name = "add" value = "${value.street_address}">
+                        </div>
+                        <div class = "col-lg-3">
+                        <p>City</p>
+                             <input class = "w-100" type = "text" id = "city{value.user_id}" name = "city" value = "${value.city}">
+                        </div>
+                        <div class = "col-lg-3">
+                        <p>State</p>
+                             <input class = "w-100" type = "text" id = "state{value.user_id}" name = "state" value = "${value.state}">
+                        </div>
+                        <div class = "col-lg-3">
+                        <p>Zip</p>
+                             <input class = "w-100" type = "text" id = "zip{value.user_id}" name = "zip" value = "${value.zip}">
+                        </div>
                 </div>
+                <div class = "row mt-1">
+                <div class = "col-lg-12 text-center">
+                    <h5>Billing Info</h5>
+                    </div>
+                    </div>
                 <div class = "row">
-                    <div class = "col-4">
-                        <p>Billing: </p>
-                    </div>
-                    <div class = "col-8">
-                        <p>${value.street_address}, ${value.city} ${value.state}</p>
-                    </div>
+                        <div class = "col-lg-3">
+                             <p>Address</p>
+                             <input class = "w-100" type = "text" id = "add{value.user_id}" name = "add" value = "${value.street_address}">
+                        </div>
+                        <div class = "col-lg-3">
+                        <p>City</p>
+                             <input class = "w-100" type = "text" id = "city{value.user_id}" name = "city" value = "${value.city}">
+                        </div>
+                        <div class = "col-lg-3">
+                        <p>State</p>
+                             <input class = "w-100" type = "text" id = "state{value.user_id}" name = "state" value = "${value.state}">
+                        </div>
+                        <div class = "col-lg-3">
+                        <p>Zip</p>
+                             <input class = "w-100" type = "text" id = "zip{value.user_id}" name = "zip" value = "${value.zip}">
+                        </div>
                 </div>
                 </div>
                 </div>

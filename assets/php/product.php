@@ -17,6 +17,8 @@ $product_price = $data[0]["product_price"];
 $product_image = $data[0]["product_image"];
 $product_image2 = $data[0]["product_image2"];
 $product_image3 = $data[0]["product_image3"];
+
+$product_qty = $data[0]["product_qty"];
 ?>
 <div class = "row mt-5 px-5">
 <div class = "col-3">
@@ -50,7 +52,7 @@ $product_image3 = $data[0]["product_image3"];
                     <h3>$<?php echo $product_price?></h3>
                 </div>
                 <div class = "row mt-1 mx-auto">
-                    <p>More details</p>
+                    <p>Qty: <?php echo $product_qty?></p>
                 </div>
             </div>
             </div>
@@ -60,7 +62,7 @@ $product_image3 = $data[0]["product_image3"];
                 <p>- Item details</p>
                 <p>- Item details</p>
                 <p>- Item details</p>
-                <p> In Stock </p>
+                <p><?php echo $product_qty?> In Stock </p>
             </div>
         </div>
 <?php include 'footer.php'; ?>
