@@ -112,7 +112,7 @@ function productAdminPanel(url) {
                 </div>
                 <div class = "col-lg-2">
                 <h5 class="mb-0">
-                    <button class="btn btn-primary my-2 my-sm-0 w-100" data-toggle="collapse" data-target="#collapse${value.id}" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="btn btn-info my-2 my-sm-0 w-100" data-toggle="collapse" data-target="#collapse${value.id}" aria-expanded="true" aria-controls="collapseOne">
                     See Details
                     </button>
                 </h5>
@@ -184,7 +184,7 @@ function productAdminPanel(url) {
                             <input class = "w-100" type = "text" id = "prod_price${value.id}" name = "prod_price">
                         </div>
                         <div class = "col-lg-4">
-                            <input class="btn btn-primary my-2 my-sm-0 w-100" type="submit" name = "update" value="Update">
+                            <input class="btn btn-success my-2 my-sm-0 w-100" type="submit" name = "update" value="Update">
                         </div>
                     </div>
                     <div class = "row">
@@ -195,7 +195,7 @@ function productAdminPanel(url) {
                             <input class = "w-100" type = "text" id = "prod_desc${value.id}" name = "prod_desc">
                         </div>
                         <div class = "col-lg-4">
-                            <input class="btn btn-primary my-2 my-sm-0 w-100" type="submit" name = "delete" value="Delete">
+                            <input class="btn btn-danger my-2 my-sm-0 w-100" type="submit" name = "delete" value="Delete">
                         </div>
                     </div>
                     </div>
@@ -241,7 +241,7 @@ function formatUserData(url) {
                 </div>
                 <div class = "col-3">
                 <h5 class="mb-0">
-                    <button class="btn btn-primary my-2 my-sm-0 collapsed" data-toggle="collapse" data-target="#collapse${value.user_id}" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="btn btn-info my-2 my-sm-0 collapsed" data-toggle="collapse" data-target="#collapse${value.user_id}" aria-expanded="true" aria-controls="collapseOne">
                     See Details
                     </button>
                 </h5>
