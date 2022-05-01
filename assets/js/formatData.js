@@ -275,6 +275,20 @@ function formatUserData(url) {
                         <input class = "btn btn-danger w-100" type = "submit" name = "admin" value = "Make Admin">
                     </div>
                 </div>
+                <div class = "row">
+                    <div class = "col-lg-2">
+                        <p>Phone: </p>
+                    </div>
+                    <div class = "col-lg-6">
+                        <input class = "w-100" type = "text" id = "phone{value.email}" name = "phone" value = "${value.phone_number}">
+                    </div>
+                    <div class = "col-lg-2">
+                        <input class = "btn btn-success w-100" type = "submit" name = "update" value = "Update">
+                    </div>
+                    <div class = "col-lg-2">
+                        <input class = "btn btn-alert w-100" type = "submit" name = "delete" value = "Delete">
+                    </div>
+                    </div>
                 <div class = "row mt-1">
                 <div class = "col-lg-12 text-center">
                     <h5>Shipping Info</h5>
@@ -283,19 +297,19 @@ function formatUserData(url) {
                 <div class = "row">
                         <div class = "col-lg-3">
                              <p>Address</p>
-                             <input class = "w-100" type = "text" id = "add{value.user_id}" name = "add" value = "${value.street_address}">
+                             <input class = "w-100" type = "text" id = "add{value.user_id}" name = "sadd" value = "${value.street_address}">
                         </div>
                         <div class = "col-lg-3">
                         <p>City</p>
-                             <input class = "w-100" type = "text" id = "city{value.user_id}" name = "city" value = "${value.city}">
+                             <input class = "w-100" type = "text" id = "city{value.user_id}" name = "scity" value = "${value.city}">
                         </div>
                         <div class = "col-lg-3">
                         <p>State</p>
-                             <input class = "w-100" type = "text" id = "state{value.user_id}" name = "state" value = "${value.state}">
+                             <input class = "w-100" type = "text" id = "state{value.user_id}" name = "sstate" value = "${value.state}">
                         </div>
                         <div class = "col-lg-3">
                         <p>Zip</p>
-                             <input class = "w-100" type = "text" id = "zip{value.user_id}" name = "zip" value = "${value.zip}">
+                             <input class = "w-100" type = "text" id = "zip{value.user_id}" name = "szip" value = "${value.zip}">
                         </div>
                 </div>
                 <div class = "row mt-1">
@@ -306,23 +320,24 @@ function formatUserData(url) {
                 <div class = "row">
                         <div class = "col-lg-3">
                              <p>Address</p>
-                             <input class = "w-100" type = "text" id = "add{value.user_id}" name = "add" value = "${value.street_address}">
+                             <input class = "w-100" type = "text" id = "add{value.user_id}" name = "badd" value = "${value.street_address}">
                         </div>
                         <div class = "col-lg-3">
                         <p>City</p>
-                             <input class = "w-100" type = "text" id = "city{value.user_id}" name = "city" value = "${value.city}">
+                             <input class = "w-100" type = "text" id = "city{value.user_id}" name = "bcity" value = "${value.city}">
                         </div>
                         <div class = "col-lg-3">
                         <p>State</p>
-                             <input class = "w-100" type = "text" id = "state{value.user_id}" name = "state" value = "${value.state}">
+                             <input class = "w-100" type = "text" id = "state{value.user_id}" name = "bstate" value = "${value.state}">
                         </div>
                         <div class = "col-lg-3">
                         <p>Zip</p>
-                             <input class = "w-100" type = "text" id = "zip{value.user_id}" name = "zip" value = "${value.zip}">
+                             <input class = "w-100" type = "text" id = "zip{value.user_id}" name = "bzip" value = "${value.zip}">
                         </div>
                 </div>
                 </div>
                 </div>
+            </form>
             </div>`;
             items.push(user_template);
         });

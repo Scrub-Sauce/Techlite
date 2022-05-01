@@ -31,10 +31,10 @@ if(isset($user)) {
       </div>
       <div class = "row">
       <div class="col-lg-3 p-1 my-auto text-center">
-          <p>Order ID:</p>
+          <h5>Order ID: <?php echo $order_id?></h5>
       </div>
       <div class="col-lg-6 p-1 my-auto text-center">
-          <p><?php echo $order_id?></p>
+          <p></p>
       </div>
       <div class = "col-lg-3 p-1 my-auto text-center">
           <p>Product Price</p>
