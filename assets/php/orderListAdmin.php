@@ -5,29 +5,22 @@
         <div class="alert alert-success" role="alert">
 
         </div>
+        <div class="card">
+        <div class="card-header">
         <div class="row">
-            <div class = "col-2">
-                <p>Order number</p>
+            <div class = "col-3">
+                <p>Order Number</p>
             </div>
-            <div class = "col-2">
-                <p></p>
+            <div class = "col-6">
+                <p>Order Date</p>
             </div>
-            <div class = "col-2">
-                <p></p>
-            </div>
-            <div class = "col-2">
-                <p></p>
-            </div>
-            <div class = "col-2">
-                <p></p>
-            </div>
-            <div class = "col-2">
+            <div class = "col-3">
                 <p>Details</p>
             </div>
         </div>
-        <div class = "orderList">
-        </div>
     </div>
+</div>
+</div>
     <script>
       orderAdminPanel("functions/getOrders.php");
     </script>
