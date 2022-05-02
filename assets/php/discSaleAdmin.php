@@ -8,11 +8,11 @@
         <div class="card">
         <div class="card-header">
         <div class="row">
-            <div class = "col-3">
+            <div class = "col-6">
                 <p>Add Discount</p>
             </div>
             <div class = "col-6">
-                <p>Add Sale</p>
+                <input type = "text" name = "sale">
             </div>
         </div>
     </div>
