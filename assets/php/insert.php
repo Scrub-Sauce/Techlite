@@ -43,6 +43,11 @@ $billState = $_POST['billstate'];
 $billZip = $_POST['billzcode'];
 $defaultBilling = $_POST['useDefaultBilling'];
 
+$order_confirmation = False;
+if (isset($_GET['order_confirmation'])) {
+    $order_confirmation = $_GET['order_confirmation'];
+}
+
 $contact_check = !empty($fname) && !empty($lname) && !empty($city) && !empty($state) && !empty($zcode) && !empty($phone)  && !empty($defaultShipping);
 $payment_check = !empty($cardName) && !empty($cardNum) && !empty($cardExp) && !empty($cardSecurity) && !empty($billAddress) && !empty($billCity) && !empty($billState) && !empty($billZip) && !empty($defaultBilling);
 
@@ -59,7 +64,24 @@ if ($contact_check && $payment_check) {
 				WHERE user_id = '$user_id'";
 		mysqli_query($con, $sql) or trigger_error("Query Failed! SQL: $sql - Error: ".mysqli_error($con), E_USER_ERROR);
 	}
-if (isset($_GET['order_confirmation'])) {
+if ($order_confirmation) {
+		$_SESSION['fname'] = $fname;
+		$_SESSION['lname'] = $lname;
+		$_SESSION['address'] = $address;
+		$_SESSION['city'] = $city;
+		$_SESSION['state'] = $state;
+		$_SESSION['zcode'] = $zcode;
+		$_SESSION['phone'] = $phone;
+	
+		$_SESSION['cardName'] = $cardName;
+		$_SESSION['cardNum'] = $cardNum;
+		$_SESSION['cardExp'] = $cardExp;
+		$_SESSION['cardSecurity'] = $cardSecurity;
+		$_SESSION['billAddress'] = $billAddress;
+		$_SESSION['billCity'] = $billCity;
+		$_SESSION['billState'] = $billState;
+		$_SESSION['billZip'] = $billZip;
+	
     header("Location: placeOrder.php?order_confirmation=Success");
     exit();
 } else {

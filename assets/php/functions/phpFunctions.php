@@ -52,14 +52,23 @@ function pushUserCartData($prod, $user, $con) {
 function pushUserOrderData($con, $user) {
     $date = date('Y-m-d H:i:s');
     $status = "Pending";
-    $sql_order = "INSERT INTO orders.order_info (user_id, order_date, order_status) VALUES ('$user', '$date', '$status')";
+    $sql_total = "SELECT SUM(product_price) FROM product_info.product_info WHERE id IN (SELECT product_id FROM registrar.cart_info WHERE user_id='$user')";
+    $result0 = mysqli_query($con,$sql_total) or die(mysqli_error($con));
+    $row0 = mysqli_fetch_row($result0);
+    $total = $row0[0];
+    if ($total <= 0) {
+        header("Location: /assets/php/cart.php");
+        exit();
+    }
+
+    $sql_order = "INSERT INTO orders.order_info (user_id, order_date, order_status, total) VALUES ('$user', '$date', '$status', '$total')";
     $result1 = mysqli_query($con,$sql_order) or die(mysqli_error($con));
     $sql_id = "SELECT * FROM orders.order_info WHERE order_id = LAST_INSERT_ID()";
     $result2 = mysqli_query($con,$sql_id) or die(mysqli_error($con));
     $row = mysqli_fetch_row($result2);
     $order_id = $row[0];
     $sql_order_products = "INSERT INTO orders.order_products (order_id, product_id, quantity, price, discount)
-                            SELECT $order_id, product_id, product_qty, '10', '10'
+                            SELECT $order_id, product_id, product_qty, '10', '0'
                             FROM registrar.cart_info WHERE registrar.cart_info.user_id = $user";
     $result3 = mysqli_query($con,$sql_order_products) or trigger_error("Query Failed! SQL: $search_sql - Error: ".mysqli_error($con), E_USER_ERROR);
     $sql_delete_cart = "DELETE FROM registrar.cart_info WHERE user_id = '$user'";

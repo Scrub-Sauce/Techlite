@@ -2,7 +2,6 @@
 include("functions/contactFunc.php");
 include("header.php");
 
-session_start();
 echo '<html lang="en" dir="ltr">';
 	echo '<head>';
 		echo '<title>Techlite | Contact us</title>';
@@ -136,7 +135,6 @@ echo '</html>';
 		$sql="INSERT into `entries` (`first_name`, `last_name`, `email`, `phone`, `comment`) VALUES ('$firstName', '$lastName', '$email', '$phone', '$comment');";
 		$dblink->query($sql) or
 			die("Something went wrong with $sql<br>".$dblink->error);
-		session_destroy();
 		redirect("/assets/php/contact.php?&msg=success");
 	}
 
