@@ -30,7 +30,7 @@ $product_qty = $data[0]["product_qty"];
     </a>
 </div>
 </div>
-	    <div class="row mx-5">
+	    <div class="container" style="display: flex;">
             <div class = "col-2">
             </div>
             <div class = "col-3 my-5">
@@ -52,14 +52,16 @@ $product_qty = $data[0]["product_qty"];
             <div class = "col-5 my-auto">
                 <h3><?php echo $product_name?></h3>
     		    <p><?php echo $product_desc?></p>
-                <div class = "row mt-1 mx-auto">
+                <div class = "row mt-1 mx-auto justify-content-center">
                     <h3>$<?php echo $product_price?></h3>
                 </div>
-                <div class = "row mt-1 mx-auto">
+                <div class = "row mt-1 mx-auto justify-content-center">
                     <p><?php echo $product_qty?> In Stock </p>
                 </div>
-                <div class = "row mt-3 mx-auto justify-content-center">
+                <div class = "row mt-1 mx-auto justify-content-center">
                     <a class="btn btn-warning" href="cart.php?prod=<?php echo $action?>">Add to Cart</a>
+                </div>
+                <div class = "row mt-3 mx-auto">
                 </div>
             </div>
             <div class = "col-2">
