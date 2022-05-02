@@ -20,8 +20,8 @@ $product_image3 = $data[0]["product_image3"];
 
 $product_qty = $data[0]["product_qty"];
 ?>
-<div class = "row mt-5 px-5">
-<div class = "col-3">
+<div class = "row mt-5 px-5 justify-content-center">
+<div class = "col-3 justify-content-center">
     <p>
         <a href="products.php">
         <i class="fa fa-arrow-left" aria-hidden="true">
@@ -30,10 +30,12 @@ $product_qty = $data[0]["product_qty"];
     </a>
 </div>
 </div>
-	    <div class="row mt-1 px-5">
-            <div class = "col-4 my-5">
-                <div class = "card border-light">
-                <img src="<?php echo $product_image ?>" width="100%" class="productImage">
+	    <div class="container" style="display: flex;">
+            <div class = "col-2">
+            </div>
+            <div class = "col-3 my-5">
+                <div class = "cardk">
+                    <img src="<?php echo $product_image ?>" width="100%" class="productImage">
                 <div class = "row">
                     <div class = "col-4">
                         <img src="<?php echo $product_image?>" width="100%" class="productImage">
@@ -45,24 +47,24 @@ $product_qty = $data[0]["product_qty"];
                         <img src="<?php echo $product_image3?>" width="100%" class="productImage">
                     </div>
                 </div>
-                <div class = "row mt-3 mx-auto">
-                    <a class="btn btn-warning" href="cart.php?prod=<?php echo $action?>">Add to Cart</a>
-                </div>
-                <div class = "row mt-1 mx-auto">
-                    <h3>$<?php echo $product_price?></h3>
-                </div>
-                <div class = "row mt-1 mx-auto">
-                    <p>Qty: <?php echo $product_qty?></p>
-                </div>
             </div>
             </div>
-            <div class = "col-8 my-auto">
+            <div class = "col-5 my-auto">
                 <h3><?php echo $product_name?></h3>
     		    <p><?php echo $product_desc?></p>
-                <p>- Item details</p>
-                <p>- Item details</p>
-                <p>- Item details</p>
-                <p><?php echo $product_qty?> In Stock </p>
+                <div class = "row mt-1 mx-auto justify-content-center">
+                    <h3>$<?php echo $product_price?></h3>
+                </div>
+                <div class = "row mt-1 mx-auto justify-content-center">
+                    <p><?php echo $product_qty?> In Stock </p>
+                </div>
+                <div class = "row mt-1 mx-auto justify-content-center">
+                    <a class="btn btn-warning" href="cart.php?prod=<?php echo $action?>">Add to Cart</a>
+                </div>
+                <div class = "row mt-3 mx-auto">
+                </div>
+            </div>
+            <div class = "col-2">
             </div>
         </div>
 <?php include 'footer.php'; ?>
