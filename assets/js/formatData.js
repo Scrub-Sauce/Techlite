@@ -232,6 +232,180 @@ function orderAdminPanel(url) {
                 <div class="card-header" id="heading${value.user_id}">
                 <div class = "row">
                 <div class = "col-3">
+                    <h5>${value.order_id}</h5>
+                </div>
+                <div class = "col-6">
+                    <h5>${value.order_date}</h5>
+                </div>
+                <div class = "col-3">
+                <h5 class="mb-0">
+                    <button class="btn btn-info my-2 my-sm-0 collapsed" data-toggle="collapse" data-target="#collapse${value.order_id}" aria-expanded="true" aria-controls="collapseOne">
+                    See Details
+                    </button>
+                </h5>
+                </div>
+                </div>
+                </div>
+
+                <div id="collapse${value.order_id}" class="collapse" aria-labelledby="heading${value.order_id}" data-parent="#accordion">
+                <div class="card-body">
+                <form onSubmit="if(!confirm('Are you sure you would like to do this?')){return false;}" method = "post" action = "">
+                <div class = "row">
+                    <div class = "col-lg-2">
+                        <h5>User ID</h5>
+                        <input class = "w-100" type = "text" id = "id{value.user_id}" name = "user_id" value = "${value.user_id}" readonly>
+                    </div>
+                    <div class = "col-lg-6">
+                        <h5>Full Name</h5>
+                        <input class = "w-100" type = "text" id = "name{value.user_id}" name = "name" value = "${value.first_name} ${value.last_name}">
+                    </div>
+                    <div class = "col-lg-4">
+                        <h5>Contact</h5>
+                        <p><a class = "btn btn-success w-100" href = "mailto:${value.email}">Send email</a></p>
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-lg-2">
+                        <p>Email: </p>
+                    </div>
+                    <div class = "col-lg-6">
+                        <input class = "w-100" type = "text" id = "mail{value.email}" name = "email" value = "${value.email}">
+                    </div>
+                    <div class = "col-lg-2">
+                        <input class = "btn btn-warning w-100" type = "submit" name = "fullfillorder" value = "Fullfill Order">
+                    </div>
+                    <div class = "col-lg-2">
+                        <input class="form-control w-100 text-center" type="text" placeholder="${value.order_status}" readonly>
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-lg-2">
+                        <p>Phone: </p>
+                    </div>
+                    <div class = "col-lg-6">
+                        <input class = "w-100" type = "text" id = "phone{value.email}" name = "phone" value = "${value.phone_number}">
+                    </div>
+                    <div class = "col-lg-2">
+                        <input class = "btn btn-success w-100" type = "submit" name = "update" value = "Update">
+                    </div>
+                    <div class = "col-lg-2">
+                        <input class = "btn btn-danger w-100" type = "submit" name = "cancelorder" value = "Cancel Order">
+                    </div>
+                    </div>
+                <div class = "row mt-1">
+                <div class = "col-lg-12 text-center">
+                    <h5>Shipping Info</h5>
+                    </div>
+                    </div>
+                <div class = "row">
+                        <div class = "col-lg-3">
+                             <p>Address</p>
+                             <input class = "w-100" type = "text" id = "add{value.user_id}" name = "sadd" value = "${value.street_address}">
+                        </div>
+                        <div class = "col-lg-3">
+                        <p>City</p>
+                             <input class = "w-100" type = "text" id = "city{value.user_id}" name = "scity" value = "${value.city}">
+                        </div>
+                        <div class = "col-lg-3">
+                        <p>State</p>
+                             <input class = "w-100" type = "text" id = "state{value.user_id}" name = "sstate" value = "${value.state}">
+                        </div>
+                        <div class = "col-lg-3">
+                        <p>Zip</p>
+                             <input class = "w-100" type = "text" id = "zip{value.user_id}" name = "szip" value = "${value.zip}">
+                        </div>
+                </div>
+                <div class = "row mt-1">
+                <div class = "col-lg-12 text-center">
+                    <h5>Billing Info</h5>
+                    </div>
+                    </div>
+                <div class = "row">
+                        <div class = "col-lg-3">
+                             <p>Address</p>
+                             <input class = "w-100" type = "text" id = "add{value.user_id}" name = "badd" value = "${value.street_address}">
+                        </div>
+                        <div class = "col-lg-3">
+                        <p>City</p>
+                             <input class = "w-100" type = "text" id = "city{value.user_id}" name = "bcity" value = "${value.city}">
+                        </div>
+                        <div class = "col-lg-3">
+                        <p>State</p>
+                             <input class = "w-100" type = "text" id = "state{value.user_id}" name = "bstate" value = "${value.state}">
+                        </div>
+                        <div class = "col-lg-3">
+                        <p>Zip</p>
+                             <input class = "w-100" type = "text" id = "zip{value.user_id}" name = "bzip" value = "${value.zip}">
+                        </div>
+                </div>
+                <div class = "row mt-1">
+                <div class = "col-lg-12 text-center">
+                    <h5>Order Contents</h5>
+                    </div>
+                    </div>
+                <div class = "row">
+                <div class = "col-lg-3">
+                        <p>Product Name</p>
+                            <input class = "w-100" type = "text" id = "prod_name${value.id}" name = "prod_name">
+                        </div>
+                        <div class = "col-lg-3">
+                        <p>Product ID</p>
+                             <input class = "w-100" type = "text" id = "prod_id${value.id}" name = "prod_id">
+                        </div>
+                        <div class = "col-lg-3">
+                        <p>Product Price</p>
+                             <input class = "w-100" type = "text" id = "prod_price${value.id}" name = "prod_price">
+                        </div>
+                        <div class = "col-lg-3">
+                        <p>Quantity</p>
+                             <input class = "w-100" type = "text" id = "zip{value.user_id}" name = "bzip" value = "${value.zip}">
+                        </div>
+                </div>
+                <div class = "row mt-1">
+                <div class = "col-lg-12 text-center">
+                    <h5>Order Subtotal</h5>
+                    </div>
+                    </div>
+                <div class = "row">
+                <div class = "col-lg-12 text-center">
+                        <p>Order Total</p>
+                            <input class = "w-100" type = "text" id = "add{value.user_id}" name = "badd" value = "${value.street_address}">
+                        </div>
+                </div>
+                </div>
+                </div>
+            </form>
+            </div>`;
+            items.push(user_template);
+        });
+        $('<div/>', {
+            html:items.join("")
+        }).appendTo(".orders");
+    },
+    error: function(x,y,z) {
+        console.log(x.responseText);
+        console.log(y);
+        console.log(z);
+    }
+});
+}
+/*
+function orderAdminPanel(url) {
+    $.ajax({
+        url: url,
+        dataType: "json",
+        data: {},
+        async: false,
+        success: function(table) {
+        var key = -1;
+        var items = [];
+        var row_template = `\t<div id = "accordion">`;
+        items.push(row_template);
+        $.each(table, function (key, value) {
+            var user_template = `<div class="card">
+                <div class="card-header" id="heading${value.user_id}">
+                <div class = "row">
+                <div class = "col-3">
                     <h5>${value.user_id}</h5>
                 </div>
                 <div class = "col-6">
@@ -351,7 +525,7 @@ function orderAdminPanel(url) {
         console.log(z);
     }
 });
-}
+}*/
 
 function formatUserData(url) {
     $.ajax({
