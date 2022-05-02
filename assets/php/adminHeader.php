@@ -17,6 +17,7 @@ if(isset($_SESSION['user'])) {
                         <li class="nav-item"><a class="nav-link" href="/assets/php/orderListAdmin.php">Order List</a></li>
                         <li class="nav-item"><a class="nav-link" href="/assets/php/userListAdmin.php">User List</a></li>
                         <li class="nav-item"><a class="nav-link" href="/assets/php/discSaleAdmin.php">Add Discounts</a></li>
+						<li class="nav-item"><a class="nav-link" href="/assets/php/entries.php">Helper Tickets</a></li>
                     </ul>
                 </div>
             </nav>

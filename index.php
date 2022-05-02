@@ -19,21 +19,21 @@
 				</ol>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<img class="d-block img-fluid" src="https://www.princetonhcs.org/-/media/images/care-and-services/princeton-house-behavioral-health/newsletters/winter-2021-spotlight-1280x780.jpg?mw=1224" alt="First Slide">
+						<img class="d-block img-fluid" src="https://cdn.discordapp.com/attachments/935914667224760380/970540434239680572/Winter-2021-spotlight-1280x780.jpg" alt="First Slide">
 						<div class="carousel-caption d-none d-md-block">
 							<h3>Premium Products</h3>
 							<p>Techlite carries premium products to keep you on the cutting edge. Whether its running an office, developing the next earth shattering software, or producing excellence in the e-sport arena, we've got you covered.</p>
 						</div>
 					</div>
 					<div class="carousel-item">
-						<img class="d-block img-fluid" src="https://c.wallhere.com/photos/e5/6f/fantasy_art-215189.jpg!d" alt="First Slide"><br>
+						<img class="d-block img-fluid" src="https://cdn.discordapp.com/attachments/935914667224760380/970540433392435220/fantasy_art-215189.jpg" alt="First Slide"><br>
 						<div class="carousel-caption d-none d-md-block">
 							<h3>Winter Sale</h3>
 							<p>Out with the old and in with the new. All of last generations finest titles now available at a steal. Find your next adventure with Techlite</p>
 						</div>
 					</div>
 					<div class="carousel-item">
-						<img class="d-block img-fluid" src="https://www.computerweekly.com/visuals/German/article/ethical-hacker-adobe.jpg" alt="First Slide">
+						<img class="d-block img-fluid" src="https://cdn.discordapp.com/attachments/935914667224760380/970540433904107580/ethical-hacker-adobe.jpg" alt="First Slide">
 						<div class="carousel-caption d-none d-md-block">
 							<h3>Expert Assistance</h3>
 							<p>Caught that power supply on fire again? Not to worry! Techlite has expert assistance available 24/7 to help you keep that DIY build at professional quality.</p>
