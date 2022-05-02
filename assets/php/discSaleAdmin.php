@@ -9,7 +9,7 @@
         <div class="card-header">
         <div class="row">
             <div class = "col-6">
-                <p>Add Discount</p>
+                <p>Add Discount Code</p>
             </div>
             <div class = "col-6">
                 <input type = "text" name = "sale">
