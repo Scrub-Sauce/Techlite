@@ -38,8 +38,8 @@
               <div class = "col-2 float-left">
                   <input type = "text" name = "prod_price">
               </div>
-              <div class = "col-2 float-left">
-                  <input type="submit" name = "add" value="Add">
+              <div class = "col-2 float-right">
+                  <input class = "btn btn-success w-100" type = "submit" name = "add" value = "Add">
               </div>
             </div>
         </form>
